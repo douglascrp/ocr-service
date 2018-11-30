@@ -1,4 +1,13 @@
 -- MySQL
+
+-- When creating the table, if you get the error message:
+-- ERROR 1067 (42000): Invalid default value for 'communicated_date'
+--
+-- Execute the following command:
+-- SET sql_mode = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+--
+-- The command will remove the options NO_ZERO_IN_DATE,NO_ZERO_DATE
+
 CREATE TABLE ocr_requests (
 id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 requestor_reference VARCHAR(50),
